@@ -40,18 +40,7 @@ Um arquivo de log de auditoria é gerado na raiz do projeto com o nome `cpf.log`
 
 1. Clone o repositório do backend.
 2. Certifique-se de ter o Docker instalado e configurado corretamente.
-3. Na raiz do projeto, execute `docker-compose up` para subir a aplicação backend, banco de dados e RabbitMQ.
-
-### Configuração do Banco de Dados
-
-- URL: jdbc:postgresql://localhost:5432/cpf-db
-
-### Configuração do RabbitMQ
-
-- URL: localhost:15672
-- Usuário: guest
-- Senha: guest
-
-## Testes
-
-Os testes unitários podem ser encontrados no diretório `src/test/java`. Eles foram desenvolvidos utilizando JUnit 5.
+3. No diretório do projeto backend, execute o seguinte comando para gerar a imagem do backend:
+   ```bash
+   docker build -t cpf-backend .
+4. Na raiz do projeto, execute `docker-compose up` para subir a aplicação backend, banco de dados e RabbitMQ.
